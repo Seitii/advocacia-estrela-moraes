@@ -1,20 +1,24 @@
 <template>
-  <q-layout view="lHh Lpr lFf" class="bg-custom-dark font-serif text-white">
+  <q-layout view="lHh Lpr lFf" class="bg-custom-dark font-montserrat text-white">
     <q-header class="bg-custom-dark text-white q-py-sm z-max border-bottom-slate" height-hint="98">
       <q-toolbar class="q-px-lg">
         <div class="flex items-center no-wrap cursor-pointer" @click="goTo('/')">
-          <q-icon name="balance" class="text-amber-4 q-mr-sm" size="24px" />
+          <q-avatar rounded size="50px">
+            <q-img :src="logo"/>
+          </q-avatar>
           <q-toolbar-title class="text-uppercase tracking-widest text-weight-light text-h6">
-            Estrela E Moraes
+            Estrela & Moraes Advocacia
           </q-toolbar-title>
         </div>
 
         <q-space />
 
         <div class="gt-sm q-gutter-md flex items-center">
-          <q-btn flat no-caps label="Expertise" class="nav-link" />
-          <q-btn flat no-caps label="O Escritório" class="nav-link" />
-          <q-btn flat no-caps label="Artigos" class="nav-link" />
+          <q-btn flat no-caps label="Áreas" class="nav-link" />
+          <q-btn flat no-caps label="Serviços" class="nav-link" />
+          <q-btn flat no-caps label="Equipe" class="nav-link" />
+          <!-- <q-btn flat no-caps label="Artigos" class="nav-link" /> -->
+          <q-btn flat no-caps label="Quem Somos" class="nav-link" />
           <q-btn 
             flat 
             label="Consulta"
@@ -22,13 +26,6 @@
             class="text-amber-4 border-amber hover-fill" 
             style="border: 1px solid #fbbf24; padding: 4px 24px;"
           />
-          <!-- <q-btn 
-            @click="logout" 
-            flat 
-            round 
-            icon="logout" 
-            class="text-grey-5 hover-text-white"
-          /> -->
         </div>
 
         <q-btn flat round icon="menu" class="lt-md text-amber-4" />
@@ -84,6 +81,7 @@ import { useQuasar } from 'quasar'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import navButtons from 'src/router/navButtons.js'
+import logo from "src/assets/logo.png";
 
 const router = useRouter()
 const $q = useQuasar()
@@ -138,7 +136,7 @@ const consulta = () => {
 <style lang="scss">
 /* Estilos Globais para replicar o Tailwind */
 .bg-custom-dark {
-  background-color: #0f172a !important;
+  background-color: #300212 !important;
 }
 
 .text-amber-4 {
@@ -146,11 +144,11 @@ const consulta = () => {
 }
 
 .border-bottom-slate {
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #300212;
 }
 
 .border-top-slate {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #300212;
 }
 
 /* Tipografia e Espaçamento */
