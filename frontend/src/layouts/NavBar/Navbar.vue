@@ -3,10 +3,10 @@
     <q-header class="bg-custom-dark text-white q-py-sm z-max border-bottom-slate" height-hint="98">
       <q-toolbar class="q-px-lg">
         <div class="flex items-center no-wrap cursor-pointer" @click="goTo('/')">
-          <q-avatar rounded size="50px">
+          <q-avatar rounded size="32px">
             <q-img :src="logo"/>
           </q-avatar>
-          <q-toolbar-title class="text-uppercase tracking-widest text-weight-light text-h6">
+          <q-toolbar-title class="tracking-widest text-weight-light">
             Estrela & Moraes Advocacia
           </q-toolbar-title>
         </div>
@@ -36,10 +36,10 @@
       <router-view />
     </q-page-container>
 
-    <footer class="bg-custom-dark text-grey-4 border-top-slate q-py-md">
+    <footer class="bg-custom-dark text-grey-4 q-py-md">
         <div class="row justify-center q-px-xl">
           <div class="col-12 col-md-4">
-              <div class="ttext-h6 text-amber-4 text-uppercase tracking-wider q-mb-md  text-amber-4">
+              <div class="text-h6 text-amber-4 text-uppercase tracking-wider q-mb-md text-amber-4">
                 Onde me encontrar?
               </div>
               <div class="row items-center q-mt-sm">
@@ -140,7 +140,7 @@ const consulta = () => {
 }
 
 .text-amber-4 {
-  color: #fbbf24 !important;
+  color: #F7E0AC !important;
 }
 
 .border-bottom-slate {
